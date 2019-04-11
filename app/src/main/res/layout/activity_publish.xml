@@ -94,13 +94,13 @@
         android:id="@+id/imageView"
         android:layout_width="102dp"
         android:layout_height="112dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.547"
         tools:srcCompat="@tools:sample/avatars[12]" />
 
     <ImageView
@@ -127,7 +127,26 @@
         android:id="@+id/imageView4"
         android:layout_width="89dp"
         android:layout_height="91dp"
-        tools:layout_editor_absoluteX="273dp"
-        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars[2]" />
+
+    <Button
+        android:id="@+id/publish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="120dp"
+        android:text="Publish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
+
 </android.support.constraint.ConstraintLayout>
