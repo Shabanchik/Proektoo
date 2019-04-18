@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CommentActivity.class);
-                startActivity(intent);
+                v.getContext()startActivity(intent);
             }
         });
 

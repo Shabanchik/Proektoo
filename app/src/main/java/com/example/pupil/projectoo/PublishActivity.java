@@ -1,5 +1,6 @@
 package com.example.pupil.projectoo;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,19 +41,20 @@ public class PublishActivity extends AppCompatActivity {
         editSurName=findViewById(R.id.editSurName);
         editText=findViewById(R.id.editText);
         publish=findViewById(R.id.publish);
+
         publish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Specs car = createCar(editSurName.getText().toString(),editName.getText().toString(), editText.getText().toString());
-                start(car.getType(),car.getPassengers(),car.getName());
+//                Need message = createMessage(editSurName.getText().toString(),editName.getText().toString(), editText.getText().toString());
+//                start(message.getSurName(),message.getName(),message.getText());
             }
         });
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Map<String, Object> user = new HashMap<>();
-        user.put("SurName", "Hanna");
-        user.put("Name", "Hanna");
-        user.put("Text", "BlaBlaBlaBlaBla");
+        user.put("surName", "Hanna");
+        user.put("name", "Hanna");
+        user.put("text", "BlaBlaBlaBlaBla");
         user.put("Comment", "what was that???");
 
         db.collection("Blog")
@@ -71,9 +73,14 @@ public class PublishActivity extends AppCompatActivity {
                     }
                 });
     }
-    public static Comment createCar(String name, String surname, String mtext){
-        Comment specs = new Comment(type, pas, maxSpeed);
-        return specs;
-    }
+//    public static Comment createMessage(String name, String surName, String text){
+//        Comment com = new Comment(name,surName,text);
+//        return com;
+//    }
+//    private void start(String type, String pas, String maxSpeed){
+//        Intent intent = new Intent(this,ResultActivity.class).putExtra("type",type).putExtra("pas",pas).putExtra("maxSpeed",maxSpeed);
+//        startActivity(intent);
+//    }
+
 
 }
