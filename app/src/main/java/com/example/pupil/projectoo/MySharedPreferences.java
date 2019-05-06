@@ -7,7 +7,7 @@ public class MySharedPreferences implements  ISharedPreferences {
     private static String NAME="com.example.pupil.projectoo";
     private static String IS_FIRST="IS_FIRST";
     private SharedPreferences preferences;
-    public MySharedPreferences( Context context){
+    public MySharedPreferences(MainActivity context){
         this.preferences=context.getSharedPreferences(NAME,Context.MODE_PRIVATE);
     }
 

@@ -53,12 +53,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
         FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
                 .setTimestampsInSnapshotsEnabled(true)
                 .build();
-        firestore.setFirestoreSettings(settings);
-        firestore.collection("Tablee")
+        db.setFirestoreSettings(settings);
+        db.collection("Tablee")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
